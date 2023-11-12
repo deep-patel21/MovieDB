@@ -7,7 +7,6 @@ export default function Home() {
 
   const admin = true;
 
-
   return (
     <>
       <Login></Login>
