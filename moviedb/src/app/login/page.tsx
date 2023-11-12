@@ -7,7 +7,7 @@ const Login = () => {
   const admin = true;
 
   return (
-    <div className="flex flex-row justify-center items-center font-mono text-green-500">
+    <div className="flex flex-col justify-center items-center font-mono text-green-500">
       <div className="w-3/4 h-screen p-28">
         <form className="border-2 border-green-500 w-full h-full flex flex-col gap-12 pt-3 2xl:h-3/5">
           <div className="w-full h-full flex flex-row justify-center items-center">
@@ -32,6 +32,9 @@ const Login = () => {
             </button>
           </div>
         </form>
+        <div className="w-full text-center p-5">
+          Developed by Deep Patel and Anmol Panchal, 2023
+        </div>
       </div>
     </div>
   );
