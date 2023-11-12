@@ -1,8 +1,13 @@
+import Queries from '@/components/Queries'
 import React from 'react'
 
 const User = () => {
   return (
-    <div>User</div>
+    <div>
+
+      <Queries></Queries>
+
+    </div>
   )
 }
 

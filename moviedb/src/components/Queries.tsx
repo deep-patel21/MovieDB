@@ -2,7 +2,9 @@ import React from 'react'
 
 const Queries = () => {
   return (
-    <div>Queries</div>
+    <div>
+      
+    </div>
   )
 }
 
