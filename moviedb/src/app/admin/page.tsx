@@ -18,11 +18,6 @@ const Admin = () => {
         <DropViews></DropViews>
         <Queries></Queries>
       </div>
-
-      {/* This div is for the inserts */}
-      <div className="">
-        <p></p>
-      </div>
       
       {/* This div is for the queries and output elements */}
       <div className="">
