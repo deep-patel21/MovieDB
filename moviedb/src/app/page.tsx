@@ -10,9 +10,7 @@ export default function Home() {
 
   return (
     <>
-      {/*<Login></Login>*/}
-      {/*<Admin></Admin>*/}
-      <User></User>
+      <Login></Login>
     </>
   )
 }
