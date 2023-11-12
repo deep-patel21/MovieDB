@@ -28,7 +28,7 @@ const Admin = () => {
           <DropViews></DropViews>
           <PopulateTables></PopulateTables>
           <div>
-            <button className='mt-11 w-full border border-white'>Logout</button>
+            <button className='mt-11 w-full border border-white hover:bg-green-500 hover:text-white'>Logout</button>
           </div>
         </div>
         <div className="text-[40px] w-full h-[600px] overflow-y-scroll border border-white p-3">
