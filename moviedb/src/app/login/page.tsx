@@ -8,23 +8,23 @@ const Login = () => {
   return (
     <div className="flex flex-row justify-center items-center font-mono text-green-500">
       <div className="w-3/4 h-screen p-28">
-        <form className="border-2 border-green-500 w-full h-full flex flex-col gap-16 pt-3">
+        <form className="border-2 border-green-500 w-full h-full flex flex-col gap-16 pt-3 2xl:h-3/5">
 
           <h1 className="text-7xl text-center pt-5 font-mono">Login</h1>
 
           <div className="flex justify-around">
             <input
-              className="bg-black text-white placeholder-white border-2 border-green-500 outline-none p-2"
+              className="bg-black text-white placeholder-white border-2 border-green-500 outline-none p-2 2xl:text-2xl"
               placeholder="Username..."
             ></input>
             <input
-              className="bg-black text-white placeholder-white border-2 border-green-500 outline-none p-2"
+              className="bg-black text-white placeholder-white border-2 border-green-500 outline-none p-2 2xl:text-2xl"
               placeholder="Password..."
             ></input>
           </div>
 
           <div className="h-full text-center">
-            <button className="text-white w-1/2 border-2 border-green-500 outline-none p-2 hover:bg-green-500">
+            <button className="text-white w-1/2 border-2 border-green-500 outline-none p-2 hover:bg-green-500 2xl:text-3xl">
               login
             </button>
           </div>
