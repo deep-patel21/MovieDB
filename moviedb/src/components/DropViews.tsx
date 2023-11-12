@@ -2,7 +2,7 @@ import React from 'react'
 
 const DropViews = () => {
   return (
-    <div>DropViews</div>
+    <button className='border border-white'>DropViews</button>
   )
 }
 

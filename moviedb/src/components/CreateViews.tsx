@@ -2,7 +2,7 @@ import React from 'react'
 
 const CreateViews = () => {
   return (
-    <div>CreateViews</div>
+    <button className='border border-white'>CreateViews</button>
   )
 }
 

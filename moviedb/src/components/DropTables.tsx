@@ -2,7 +2,7 @@ import React from 'react'
 
 const DropTables = () => {
   return (
-    <div>DropTables</div>
+    <button className='border border-white'>DropTables</button>
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const PopulateTables = () => {
   return (
-    <div>PopulateTables</div>
+    <button className='border border-white'>PopulateTables</button>
   )
 }
 

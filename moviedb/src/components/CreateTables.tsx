@@ -2,7 +2,7 @@ import React from 'react'
 
 const CreateTables = () => {
   return (
-    <div>CreateTables</div>
+    <button className='border border-white'>CreateTables</button>
   )
 }
 
