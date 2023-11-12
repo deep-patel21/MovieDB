@@ -13,23 +13,15 @@ const Admin = () => {
       <div className="flex flex-col gap-3 justify-start">
         <CreateTables></CreateTables>
         <CreateViews></CreateViews>
-        <PopulateTables></PopulateTables>
         <DropTables></DropTables>
         <DropViews></DropViews>
+        <PopulateTables></PopulateTables>
+      </div>
+      <div>
         <Queries></Queries>
       </div>
-
-      {/* This div is for the inserts */}
-      <div className="">
-        <p></p>
-      </div>
-      
       {/* This div is for the queries and output elements */}
-      <div className="">
-        <p id="queries">
-
-        </p>
-        
+      <div className="">  
         <p id="output">
 
         </p>
