@@ -1,6 +1,7 @@
 import React from "react";
 import Admin from "../admin/page";
 import User from "../user/page";
+import Image from 'next/image';
 
 const Login = () => {
   const admin = true;
@@ -8,17 +9,19 @@ const Login = () => {
   return (
     <div className="flex flex-row justify-center items-center font-mono text-green-500">
       <div className="w-3/4 h-screen p-28">
-        <form className="border-2 border-green-500 w-full h-full flex flex-col gap-16 pt-3 2xl:h-3/5">
+        <form className="border-2 border-green-500 w-full h-full flex flex-col gap-12 pt-3 2xl:h-3/5">
+          <div className="w-full h-full flex flex-row justify-center items-center">
+            <h1 className="text-7xl text-center pt-5 font-mono">Login</h1>
+          </div>
 
-          <h1 className="text-7xl text-center pt-5 font-mono">Login</h1>
-
-          <div className="flex justify-around">
+          <div className="flex flex-row justify-around">
             <input
-              className="bg-black text-white placeholder-white border-2 border-green-500 outline-none p-2 2xl:text-2xl"
+              className="bg-black text-white placeholder-white border-2 border-green-500 outline-none p-2 h-1/2 2xl:text-2xl"
               placeholder="Username..."
             ></input>
+            <Image src="/logoFinal.png" alt="" height={100} width={100} className="m-0"/>
             <input
-              className="bg-black text-white placeholder-white border-2 border-green-500 outline-none p-2 2xl:text-2xl"
+              className="bg-black text-white placeholder-white border-2 border-green-500 outline-none p-2 h-1/2 2xl:text-2xl"
               placeholder="Password..."
             ></input>
           </div>
@@ -28,7 +31,6 @@ const Login = () => {
               login
             </button>
           </div>
-
         </form>
       </div>
     </div>
