@@ -13,7 +13,7 @@ const Admin = () => {
       <div className="text-[65px] p-2 flex flex-row border border-white items-center">
         <div className="p-5">
           <Image 
-          src="/logo.png"
+          src="/logoFinal.png"
           alt="logo"
           width={100}
           height={100}/>
