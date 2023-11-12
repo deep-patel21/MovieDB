@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import Login from './login/page'
+import Admin from './admin/page';
+import User from './user/page';
 
 export default function Home() {
 
@@ -8,7 +10,9 @@ export default function Home() {
 
   return (
     <>
-      <Login></Login>
+      {/*<Login></Login>*/}
+      {/*<Admin></Admin>*/}
+      <User></User>
     </>
   )
 }

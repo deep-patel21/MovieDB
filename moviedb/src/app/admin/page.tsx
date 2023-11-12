@@ -18,7 +18,7 @@ const Admin = () => {
           width={100}
           height={100}/>
         </div>
-        <h1>MovieDB | CPS510 Term Project</h1>
+        <h1>MovieDB | CPS510 Term Project | Admin Menu</h1>
       </div>
       <div className="flex flex-row border-4 border-black p-10 gap-11">
         <div className="text-[35px] flex flex-col gap-3 p-2 justify-start">
