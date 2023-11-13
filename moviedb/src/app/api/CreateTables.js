@@ -7,7 +7,7 @@ async function run() {
     connection = await oracledb.getConnection({
       user: 'dcpatel',
       password: '06210050',
-      connectString: 'dcpatel/06210050@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))',
+      connectString: 'dcpatel/06210050@oracle.scs.ryerson.ca:1521/orcl',
     });
 
     const result = await connection.execute(
@@ -133,7 +133,6 @@ async function run() {
               FOREIGN KEY (review_id) REFERENCES Review(review_id),\
               FOREIGN KEY (film_id) REFERENCES Film(film_id)\
           );');
-          
     res.status(200).json(result.rows);
 
   } catch (err) {
