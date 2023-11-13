@@ -3,7 +3,7 @@ import React from 'react'
 const DropViews = () => {
 
   const handler = async () => { 
-    let request = await fetch('/api/DropViews.js')
+    let request = await fetch('/app/api/DropViews.js')
     const data = await request.json()
     console.log(data);
   }

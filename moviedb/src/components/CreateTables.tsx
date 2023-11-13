@@ -4,7 +4,7 @@ const CreateTables = () => {
 
   const handler = async () =>
   {
-    let request = await fetch('/api/CreateTables.js')
+    let request = await fetch('/app/api/CreateTables.js')
     const response = await request.json();
     console.log(response);
   } 
