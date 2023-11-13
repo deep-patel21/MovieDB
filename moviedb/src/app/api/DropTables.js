@@ -7,7 +7,7 @@ async function run() {
     connection = await oracledb.getConnection({
       user: 'dcpatel',
       password: '06210050',
-      connectString: 'dcpatel/06210050@localhost:1521/orcl',
+      connectString: 'localhost:1521/orcl',
     });
 
     const result = await connection.execute(" \
@@ -28,7 +28,7 @@ async function run() {
       DROP TABLE TheUser_Creates_Review CASCADE CONSTRAINTS; \
       DROP TABLE Review_Rates_Film CASCADE CONSTRAINTS; ");
     
-    res.status(200).json(result.rows);
+    //res.status(200).json(result.rows);
 
   } catch (err) {
     console.error(err);
