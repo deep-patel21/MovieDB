@@ -10,8 +10,6 @@ async function run() {
       connectString: 'dcpatel/06210050@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))',
     });
 
-    
-
   } catch (err) {
     console.error(err);
   } finally {
