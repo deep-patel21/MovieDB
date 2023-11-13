@@ -3,7 +3,7 @@ import React from 'react'
 const PopulateTables = () => {
 
   const handler = async () => { 
-    let request = await fetch('/api/createViews.js')
+    let request = await fetch('/api/PopulateTables.js')
     const data = await request.json()
     console.log(data);
   }
