@@ -1,17 +1,17 @@
-const oracledb = require('oracledb');
+import { getConnection } from 'oracledb';
 
 async function run() {
   let connection;
 
   try {
-    connection = await oracledb.getConnection({
+    connection = await getConnection({
       user: 'dcpatel',
       password: '06210050',
-      connectString: 'dcpatel/06210050@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))',
+      connectString: 'dcpatel/06210050@localhost:1521/orcl',
     });
 
-    const result = await connection.execute(
-        'CREATE TABLE Actor (\
+    connection.execute(
+           'CREATE TABLE Actor (\
             actor_id NUMBER PRIMARY KEY,\
             first_name VARCHAR2(50) NOT NULL,\
             last_name VARCHAR2(50) NOT NULL,\
@@ -133,8 +133,8 @@ async function run() {
               FOREIGN KEY (review_id) REFERENCES Review(review_id),\
               FOREIGN KEY (film_id) REFERENCES Film(film_id)\
           );');
-          
-    res.status(200).json(result.rows);
+
+    //res.status(200).json(result.rows);
 
   } catch (err) {
     console.error(err);

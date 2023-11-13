@@ -1,9 +1,23 @@
-import React from 'react'
+"use client";
+
+import React from "react";
 
 const DropTables = () => {
-  return (
-    <button className='border border-white hover:bg-green-500 hover:text-white'>DropTables</button>
-  )
-}
+  
+  const handler = async () => {
+    let request = await fetch("/api/DropTables.js");
+    const data = await request.json();
+    console.log(data);
+  };
 
-export default DropTables
+  return (
+    <button
+      className="border border-white hover:bg-green-500 hover:text-white"
+      onClick={handler}
+    >
+      DropTables
+    </button>
+  );
+};
+
+export default DropTables;
