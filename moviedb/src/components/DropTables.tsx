@@ -3,26 +3,15 @@
 import React from "react";
 
 const DropTables = () => {
-<<<<<<< HEAD
-  
   const handler = async () => {
-    let request = await fetch("/api/DropTables.js");
-    const data = await request.json();
-    console.log(data);
+    try {
+      let request = await fetch("/app/api/DropTables");
+      const data = await request.json();
+      console.log(data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
-=======
-
-  const handler = async () => { 
-    let request = await fetch('/api/createViews.js')
-    const data = await request.json()
-    console.log(data);
-  }
-
-  return (
-    <button className='border border-white hover:bg-green-500 hover:text-white'>DropTables</button>
-  )
-}
->>>>>>> f42fd4b5cf09b16970596324f4954d70593854ac
 
   return (
     <button
