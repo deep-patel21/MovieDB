@@ -7,6 +7,7 @@ import DropTables from "@/components/DropTables";
 import DropViews from "@/components/DropViews";
 import Queries from "@/components/Queries";
 
+
 const Admin = () => {
   return (
     <div className="font-mono text-green-500 text-center">
@@ -39,7 +40,7 @@ const Admin = () => {
             <Queries></Queries>
           </div>
           <p id="output">
-            testing
+
           </p>
         </div>
       </div>

@@ -10,7 +10,8 @@ async function run() {
       connectString: 'dcpatel/06210050@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))',
     });
 
-    
+    const result = await connection.execute('SELECT * FROM your_table');
+    res.status(200).json(result.rows);
 
   } catch (err) {
     console.error(err);
