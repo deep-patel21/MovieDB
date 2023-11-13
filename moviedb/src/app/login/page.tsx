@@ -13,7 +13,7 @@ const Login = () => {
           <div className="w-full h-full flex flex-row justify-center items-center">
             <h1 className="text-7xl text-center pt-5 font-mono">Login</h1>
           </div>
-
+          
           <div className="flex flex-row justify-around">
             <input
               className="bg-black text-white placeholder-white border-2 border-green-500 outline-none p-2 h-1/2 2xl:text-2xl"
