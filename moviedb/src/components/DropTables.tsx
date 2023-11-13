@@ -5,9 +5,13 @@ import React from "react";
 const DropTables = () => {
 
   const handler = async () => {
-    let request = await fetch("/app/api/DropTables");
-    const data = await request.json();
-    console.log(data);
+    try{
+      let request = await fetch("/api/DropTables");
+      const data = await request.json();
+      console.log(data);
+    }catch(err){
+      console.log(err)
+    }
   };
 
   return (
