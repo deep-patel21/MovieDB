@@ -33,7 +33,7 @@ const Login = () => {
           </div>
         </form>
         <div className="w-full text-center p-5">
-          Developed by Deep Patel and Anmol Panchal, 2023
+          Developed by Deep Patel and Anmol Panchal, November 2023
         </div>
       </div>
     </div>
