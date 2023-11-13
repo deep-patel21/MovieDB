@@ -10,7 +10,10 @@ async function run() {
       connectString: 'dcpatel/06210050@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))',
     });
 
-    const result = await connection.execute('SELECT * FROM your_table');
+    const result = await connection.execute(" \
+      DROP VIEW Film_View_without_Director; \
+      DROP VIEW Actor_Notable_Works; \
+      DROP VIEW Anonymous_Ratings; ");
     res.status(200).json(result.rows);
 
   } catch (err) {
