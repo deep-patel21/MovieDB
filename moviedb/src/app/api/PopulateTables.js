@@ -7,7 +7,7 @@ async function run() {
     connection = await oracledb.getConnection({
       user: 'dcpatel',
       password: '06210050',
-      connectString: 'dcpatel/06210050@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))',
+      connectString: 'dcpatel/06210050@oracle.scs.ryerson.ca:1521/orcl',
     });
 
     const result = await connection.execute("INSERT INTO Actor (actor_id, first_name, last_name, birthdate, nationality, filmography) \
