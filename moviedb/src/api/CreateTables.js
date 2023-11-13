@@ -133,6 +133,7 @@ async function run() {
               FOREIGN KEY (review_id) REFERENCES Review(review_id),\
               FOREIGN KEY (film_id) REFERENCES Film(film_id)\
           );');
+          
     res.status(200).json(result.rows);
 
   } catch (err) {
