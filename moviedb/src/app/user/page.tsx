@@ -29,6 +29,10 @@ const User = () => {
         <div className="text-[40px] w-full h-[600px] overflow-y-scroll border border-white p-3">
           <div className="border border-white">
             <Queries></Queries>
+            <button className="hover:bg-green-500 hover:text-white"> | Preset 1 | </button>
+            <button className="hover:bg-green-500 hover:text-white"> | Preset 2 | </button>
+            <button className="hover:bg-green-500 hover:text-white"> | Preset 3 | </button>
+            <button className="hover:bg-green-500 hover:text-white"> | Preset 4 | </button>
           </div>
           <p id="output">
             testing

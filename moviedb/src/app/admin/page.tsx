@@ -29,15 +29,19 @@ const Admin = () => {
           <DropViews></DropViews>
           <PopulateTables></PopulateTables>
           <div>
-            <button className='mt-11 w-full border border-white hover:bg-green-500 hover:text-white'>Execute Query</button>
+            <button className='mt-10 w-full border border-white hover:bg-green-500 hover:text-white'>Execute Custom Query</button>
           </div>
           <div>
             <button className='mt-11 w-full border border-white hover:bg-green-500 hover:text-white'>Logout</button>
           </div>
         </div>
         <div className="text-[40px] w-full h-[600px] overflow-y-scroll border border-white p-3">
-          <div className="border border-white">
+          <div className="border border-white flex flex-row gap-11 p-1">
             <Queries></Queries>
+            <button className="hover:bg-green-500 hover:text-white"> | Preset 1 | </button>
+            <button className="hover:bg-green-500 hover:text-white"> | Preset 2 | </button>
+            <button className="hover:bg-green-500 hover:text-white"> | Preset 3 | </button>
+            <button className="hover:bg-green-500 hover:text-white"> | Preset 4 | </button>
           </div>
           <p id="output">
 
