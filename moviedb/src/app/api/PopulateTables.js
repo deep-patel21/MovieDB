@@ -37,7 +37,7 @@ async function run() {
     for (const statement of actorInsertStatements) {
         try {
             await connection.execute(statement);
-            console.log(`Data Inserted for: ${statement}`);
+            //console.log(`Data Inserted for: ${statement}`);
         } catch (err) {
             console.error(`Error inserting data: ${statement}`, err);
         }
@@ -60,7 +60,7 @@ async function run() {
        for (const statement of directorInsertStatements) {
         try {
             await connection.execute(statement);
-            console.log(`Data Inserted for: ${statement}`);
+            // console.log(`Data Inserted for: ${statement}`);
         } catch (err) {
             console.error(`Error inserting data: ${statement}`, err);
         }
@@ -79,7 +79,7 @@ async function run() {
         for (const statement of producerInsertStatements) {
             try {
                 await connection.execute(statement);
-                console.log(`Data Inserted for: ${statement}`);
+                // console.log(`Data Inserted for: ${statement}`);
             } catch (err) {
                 console.error(`Error inserting data: ${statement}`, err);
             }
@@ -100,7 +100,7 @@ async function run() {
         for (const statement of userInsertStatements) {
             try {
                 await connection.execute(statement);
-                console.log(`Data Inserted for: ${statement}`);
+                // console.log(`Data Inserted for: ${statement}`);
             } catch (err) {
                 console.error(`Error inserting data: ${statement}`, err);
             }
@@ -120,7 +120,7 @@ async function run() {
       for (const statement of studioInsertStatements) {
         try {
             await connection.execute(statement);
-            console.log(`Data Inserted for: ${statement}`);
+            // console.log(`Data Inserted for: ${statement}`);
         } catch (err) {
             console.error(`Error inserting data: ${statement}`, err);
         }
@@ -140,7 +140,7 @@ async function run() {
        for (const statement of receiverInsertStatements) {
         try {
             await connection.execute(statement);
-            console.log(`Data Inserted for: ${statement}`);
+            // console.log(`Data Inserted for: ${statement}`);
         } catch (err) {
             console.error(`Error inserting data: ${statement}`, err);
         }
@@ -163,7 +163,7 @@ async function run() {
       for (const statement of filmInsertStatements) {
         try {
             await connection.execute(statement);
-            console.log(`Data Inserted for: ${statement}`);
+            // console.log(`Data Inserted for: ${statement}`);
         } catch (err) {
             console.error(`Error inserting data: ${statement}`, err);
         }
@@ -182,7 +182,7 @@ async function run() {
       for (const statement of awardsInsertStatements) {
         try {
             await connection.execute(statement);
-            console.log(`Data Inserted for: ${statement}`);
+            // console.log(`Data Inserted for: ${statement}`);
         } catch (err) {
             console.error(`Error inserting data: ${statement}`, err);
         }
@@ -205,13 +205,14 @@ async function run() {
     for (const statement of reviewInsertStatements) {
         try {
             await connection.execute(statement);
-            console.log(`Data Inserted for: ${statement}`);
+            // console.log(`Data Inserted for: ${statement}`);
         } catch (err) {
             console.error(`Error inserting data: ${statement}`, err);
         }
       }
 
     //res.status(200).json(result.rows); */
+    await connection.execute("COMMIT")
   } catch (err) {
     console.error(err);
   } finally {
