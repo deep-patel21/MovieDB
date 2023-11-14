@@ -1,4 +1,3 @@
-const { connect } = require('http2');
 const oracledb = require('oracledb');
 
 async function queries() {
@@ -24,21 +23,19 @@ async function queries() {
       console.log(" ");
 
       console.log("Rows: ", systemTestQuery.rows);
-      const query1 = await connection.execute('SELECT f.title AS title, d.first_name || \' \' || d.last_name AS DIRECTOR_and_MOVIE FROM Film f JOIN Director d ON f.director_id = d.director_id ORDER BY first_name');
-      const query2 = await connection.execute('SELECT first_name, last_name FROM Actor');
-      const query3 = await connection.execute('SELECT first_name, last_name, username, password FROM TheUser ORDER BY password');
-      const query4 = await connection.execute('SELECT a.theName, a.presenter, a.year_of_win, r.theName FROM Awards a JOIN Receiver r ON a.receiver_id = r.receiver_id WHERE a.year_of_win > 2021');
+      let query1 = await connection.execute('SELECT f.title AS title, d.first_name || \' \' || d.last_name AS DIRECTOR_and_MOVIE FROM Film f JOIN Director d ON f.director_id = d.director_id ORDER BY first_name');
+      let query2 = await connection.execute('SELECT first_name, last_name FROM Actor');
+      let query3 = await connection.execute('SELECT first_name, last_name, username, password FROM TheUser ORDER BY password');
+      let query4 = await connection.execute('SELECT a.theName, a.presenter, a.year_of_win, r.theName FROM Awards a JOIN Receiver r ON a.receiver_id = r.receiver_id WHERE a.year_of_win > 2021');
       console.log("Query Result 1:", query1.rows);
       console.log("Query Result 2:", query2.rows);
       console.log("Query Result 3:", query3.rows);
       console.log("Query Result 4:", query4.rows);
-
     } catch (err) {
       console.log(err);
     }
-
+    return query1.row;
     //res.status(200).json(result.rows);
-
   } catch (err) {
     console.error(err);
   } finally {
@@ -53,3 +50,5 @@ async function queries() {
 }
 
 queries();
+
+module.exports = { query1, query2, query3, query4 };

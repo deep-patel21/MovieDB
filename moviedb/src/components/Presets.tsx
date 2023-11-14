@@ -1,18 +1,14 @@
 'use client';
 
 import React from 'react'
+import queries from './Queries'
 
 const Presets = () => {
-    const handler = async () => { 
-        let request = await fetch('/app/api/Queries.js')
-        const data = await request.json()
-        console.log(data);
-    }
 
     const testFunc1 = async () => {
         let content = document.getElementById("output");
         if (content) {
-            content.textContent = "Hello. Test Successful for Query Preset 1.";
+            content.textContent = "Hello. Query Preset 1 is a success.";
         }
     }
     const testFunc2 = async () => {
@@ -32,7 +28,7 @@ const Presets = () => {
         if (content) {
             content.textContent = "Yo. The test has passed for Query Preset 4.";
         }
-    }
+    } 
     
       return (
         <div className='flex flex-row text-2xl gap-1 2xl:gap-11 2xl:ml-0'>
