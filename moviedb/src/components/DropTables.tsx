@@ -1,19 +1,17 @@
 "use client";
 
 import React from "react";
+import droptables from "../app/api/DropTables"
 
 const DropTables = () => {
-
-  const handler = async () => {
-    let request = await fetch("/api/DropTables");
-    const data = await request.json();
-    console.log(data);
+  const Handler = async () => {
+    await droptables();
   };
 
   return (
     <button
       className="border border-white hover:bg-green-500 hover:text-white"
-      onClick={handler}
+      onClick={Handler}
     >
       DropTables
     </button>
