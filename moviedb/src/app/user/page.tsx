@@ -19,6 +19,13 @@ const User = () => {
           height={100}/>
         </div>
         <h1>MovieDB | CPS510 Term Project | User Menu</h1>
+        <div className="p-5">
+          <Image 
+          src="/userLogo.png"
+          alt="logo"
+          width={100}
+          height={100}/>
+        </div>
       </div>
       <div className="flex flex-row border-4 border-black p-10 gap-11">
         <div className="text-[35px] flex flex-col gap-3 p-2 justify-start">
@@ -27,7 +34,7 @@ const User = () => {
           </div>
         </div>
         <div className="text-[40px] w-full h-[600px] overflow-y-scroll border border-white p-3">
-          <div className="border border-white">
+          <div className="border border-white flex flex-row gap-11 p-1">
             <Queries></Queries>
             <button className="hover:bg-green-500 hover:text-white"> | Preset 1 | </button>
             <button className="hover:bg-green-500 hover:text-white"> | Preset 2 | </button>

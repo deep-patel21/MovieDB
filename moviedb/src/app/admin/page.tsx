@@ -20,6 +20,13 @@ const Admin = () => {
           height={100}/>
         </div>
         <h1>MovieDB | CPS510 Term Project | Admin Menu</h1>
+        <div className="p-5">
+          <Image 
+          src="/adminLogo.png"
+          alt="logo"
+          width={100}
+          height={100}/>
+        </div>
       </div>
       <div className="flex flex-row border-4 border-black p-10 gap-11">
         <div className="text-[35px] flex flex-col gap-3 p-2 justify-start">
