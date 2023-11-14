@@ -6,7 +6,7 @@ import PopulateTables from "@/components/PopulateTables";
 import DropTables from "@/components/DropTables";
 import DropViews from "@/components/DropViews";
 import Queries from "@/components/Queries";
-
+import Presets from "@/components/Presets";
 
 const Admin = () => {
   return (
@@ -43,15 +43,14 @@ const Admin = () => {
           </div>
         </div>
         <div className="text-[40px] w-full h-[600px] overflow-y-scroll border border-white p-3">
-          <div className="border border-white flex flex-row gap-11 p-1">
-            <Queries></Queries>
-            <button className="hover:bg-green-500 hover:text-white"> | Preset 1 | </button>
-            <button className="hover:bg-green-500 hover:text-white"> | Preset 2 | </button>
-            <button className="hover:bg-green-500 hover:text-white"> | Preset 3 | </button>
-            <button className="hover:bg-green-500 hover:text-white"> | Preset 4 | </button>
+          <div className="border border-white flex flex-row gap-11 p-2">
+            <div className="px-[5px]">
+              <Queries></Queries>
+            </div>
+            <Presets></Presets>
           </div>
           <p id="output">
-
+            testing
           </p>
         </div>
       </div>
