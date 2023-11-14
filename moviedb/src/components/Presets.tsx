@@ -35,7 +35,7 @@ const Presets = () => {
     }
     
       return (
-        <div className='flex flex-row gap-11'>
+        <div className='flex flex-row text-2xl gap-1 2xl:gap-11 2xl:ml-0'>
             <button className="hover:bg-green-500 hover:text-white" onClick={testFunc1}> | Preset 1 | </button>
             <button className="hover:bg-green-500 hover:text-white" onClick={testFunc2}> | Preset 2 | </button>
             <button className="hover:bg-green-500 hover:text-white" onClick={testFunc3}> | Preset 3 | </button>
