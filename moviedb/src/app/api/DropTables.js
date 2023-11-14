@@ -60,4 +60,3 @@ async function droptables() {
 
 droptables();
 
-module.exports = droptables
