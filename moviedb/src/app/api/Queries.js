@@ -1,6 +1,6 @@
 const oracledb = require('oracledb');
 
-async function run() {
+async function queries() {
   let connection;
 
   try {
@@ -37,4 +37,4 @@ async function run() {
   }
 }
 
-run();
+queries();

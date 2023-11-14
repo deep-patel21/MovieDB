@@ -49,9 +49,7 @@ const Admin = () => {
             </div>
             <Presets></Presets>
           </div>
-          <p id="output">
-            testing
-          </p>
+          <p id="output">testing</p>
         </div>
       </div>
       <div>
