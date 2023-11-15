@@ -1,20 +1,19 @@
-"use client";
+'use client';
 
-import React from "react";
+import React from 'react'
 
 const CreateViews = () => {
-  const handler = async () => {
+
+  const handler = async () => { 
     try {
-      const response = await fetch("http://localhost:3001/api/CreateViews", {
-        method: "POST",
-      });
+      const response = await fetch('http://localhost:3001/api/CreateViews', { method: 'POST' });
       const data = await response.json();
       //console.log(data);
       alert("Successfully created views!");
     } catch (error) {
       console.error(error);
     }
-  };
+  }
 
   return (
     <button
