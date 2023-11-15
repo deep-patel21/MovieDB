@@ -15,7 +15,7 @@ const Presets = () => {
       content.textContent = "Hello. Test Successful for Query Preset 1.";
       content.setAttribute(
         "value",
-        "Hello. Test Successful for Query Preset 1."
+        "Hello. Test Successful for Query Preset 1.Hello.Test Successful for Query Preset 1."
       );
     }
   };
@@ -35,7 +35,7 @@ const Presets = () => {
   const testFunc4 = async () => {
     let content = document.getElementById("output");
     if (content) {
-      content.textContent = "Yo. The test has passed for Query Preset 4.";
+      content.innerHTML = "Yo. The test has passed for Query Preset 4.";
       content.setAttribute(
         "value",
         "Yo. The test has passed for Query Preset 4."
@@ -48,7 +48,7 @@ const Presets = () => {
       <button
         className="hover:bg-green-500 hover:text-white"
         onClick={testFunc1}
-      >
+        >
         {" "}
         | Preset 1 |{" "}
       </button>
