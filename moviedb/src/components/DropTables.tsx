@@ -1,18 +1,17 @@
-"use client";
+'use client';
 
-import React from "react";
-import droptables from "@/app/api/DropTables";
+import React from 'react';
 
 const DropTables = () => {
-  const handler = async () => { 
+  const handler = async () => {
     try {
-      const response = await fetch('/api/droptables', { method: 'POST' });
+      const response = await fetch('http://localhost:3001/api/DropTables', { method: 'POST' });
       const data = await response.json();
       console.log(data);
     } catch (error) {
       console.error(error);
     }
-  }
+  };
 
   return (
     <button
