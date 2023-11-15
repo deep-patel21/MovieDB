@@ -9,7 +9,7 @@ const CreateViews = () => {
         method: "POST",
       });
       const data = await response.json();
-      console.log(data);
+      //console.log(data);
       alert("Successfully created views!");
     } catch (error) {
       console.error(error);
@@ -19,7 +19,7 @@ const CreateViews = () => {
   return (
     <button
       className="border border-white hover:bg-green-500 hover:text-white"
-      onClick={() => handler}
+      onClick={handler}
     >
       CreateViews
     </button>

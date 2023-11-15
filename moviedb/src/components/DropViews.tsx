@@ -8,7 +8,7 @@ const DropViews = () => {
     try {
       const response = await fetch('http://localhost:3001/api/DropViews', { method: 'POST' });
       const data = await response.json();
-      console.log(data);
+      //console.log(data);
       alert("Successfully dropped views!");
     } catch (error) {
       console.error(error);
@@ -16,7 +16,7 @@ const DropViews = () => {
   }
 
   return (
-    <button className='border border-white hover:bg-green-500 hover:text-white' onClick={() => handler}>DropViews</button>
+    <button className='border border-white hover:bg-green-500 hover:text-white' onClick={handler}>DropViews</button>
   )
 }
 

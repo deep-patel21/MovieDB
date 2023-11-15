@@ -8,7 +8,7 @@ const PopulateTables = () => {
     try {
       const response = await fetch('http://localhost:3001/api/PopulateTables', { method: 'POST' });
       const data = await response.json();
-      console.log(data);
+      //console.log(data);
       alert("Successfully inserted data!");
     } catch (error) {
       console.error(error);
@@ -16,7 +16,7 @@ const PopulateTables = () => {
   }
 
   return (
-    <button className='border border-white hover:bg-green-500 hover:text-white' onClick={() => handler}>PopulateTables</button>
+    <button className='border border-white hover:bg-green-500 hover:text-white' onClick={handler}>PopulateTables</button>
   )
 }
 

@@ -9,7 +9,7 @@ const CreateTables = () => {
         method: "POST",
       });
       const data = await response.json();
-      console.log(data);
+      //console.log(data);
       alert("Successfully created tables!");
     } catch (error) {
       console.error(error);
@@ -19,7 +19,7 @@ const CreateTables = () => {
   return (
     <button
       className="border border-white hover:bg-green-500 hover:text-white"
-      onClick={() => handler}
+      onClick={handler}
     >
       CreateTables
     </button>
