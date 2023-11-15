@@ -13,6 +13,12 @@ const port = 3001; //server port is different from frontend
 
 app.use(cors());
 
+app.get("/api", (req,res) =>
+{
+  res.send("Hello world!")
+
+})
+
 app.post('/api/CreateTables', async (req, res) => {
   try {
     await createtables();

@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 
 const PopulateTables = () => {
@@ -14,7 +16,7 @@ const PopulateTables = () => {
   }
 
   return (
-    <button className='border border-white hover:bg-green-500 hover:text-white'>PopulateTables</button>
+    <button className='border border-white hover:bg-green-500 hover:text-white' onClick={() => handler}>PopulateTables</button>
   )
 }
 

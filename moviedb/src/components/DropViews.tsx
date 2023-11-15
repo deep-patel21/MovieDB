@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 
 const DropViews = () => {
@@ -14,7 +16,7 @@ const DropViews = () => {
   }
 
   return (
-    <button className='border border-white hover:bg-green-500 hover:text-white'>DropViews</button>
+    <button className='border border-white hover:bg-green-500 hover:text-white' onClick={() => handler}>DropViews</button>
   )
 }
 
