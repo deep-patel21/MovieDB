@@ -19,7 +19,7 @@ const CreateTables = () => {
   return (
     <button
       className="border border-white hover:bg-green-500 hover:text-white"
-      onClick={() => handler}
+      onClick={handler}
     >
       CreateTables
     </button>

@@ -16,7 +16,7 @@ const DropViews = () => {
   }
 
   return (
-    <button className='border border-white hover:bg-green-500 hover:text-white' onClick={() => handler}>DropViews</button>
+    <button className='border border-white hover:bg-green-500 hover:text-white' onClick={handler}>DropViews</button>
   )
 }
 
