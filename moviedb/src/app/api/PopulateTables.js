@@ -1,6 +1,6 @@
 const oracledb = require('oracledb');
 
-async function run() {
+async function populatetables() {
   let connection;
 
   try {
@@ -226,4 +226,6 @@ async function run() {
   }
 }
 
-run();
+populatetables();
+
+module.exports = populatetables;

@@ -3,9 +3,14 @@ import React from 'react'
 const PopulateTables = () => {
 
   const handler = async () => { 
-    let request = await fetch('/app/api/PopulateTables.js')
-    const data = await request.json()
-    console.log(data);
+    try {
+      const response = await fetch('http://localhost:3001/api/PopulateTables', { method: 'POST' });
+      const data = await response.json();
+      console.log(data);
+      alert("Successfully inserted data!");
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (

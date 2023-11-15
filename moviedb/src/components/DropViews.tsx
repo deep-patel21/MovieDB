@@ -3,9 +3,14 @@ import React from 'react'
 const DropViews = () => {
 
   const handler = async () => { 
-    let request = await fetch('/app/api/DropViews.js')
-    const data = await request.json()
-    console.log(data);
+    try {
+      const response = await fetch('http://localhost:3001/api/DropViews', { method: 'POST' });
+      const data = await response.json();
+      console.log(data);
+      alert("Successfully dropped views!");
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (

@@ -5,9 +5,14 @@ import React from 'react'
 const CreateViews = () => {
 
   const handler = async () => { 
-    let request = await fetch('/app/api/CreateViews.js')
-    const data = await request.json()
-    console.log(data);
+    try {
+      const response = await fetch('http://localhost:3001/api/CreateViews', { method: 'POST' });
+      const data = await response.json();
+      console.log(data);
+      alert("Successfully created views!");
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (

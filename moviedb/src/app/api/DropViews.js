@@ -1,6 +1,6 @@
 const oracledb = require('oracledb');
 
-async function run() {
+async function dropviews() {
   let connection;
 
   try {
@@ -50,4 +50,6 @@ async function run() {
   }
 }
 
-run();
+dropviews();
+
+module.exports = dropviews;
