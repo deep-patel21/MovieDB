@@ -46,9 +46,15 @@ const Admin = () => {
             </div>
             <Presets></Presets>
           </div>
-          <div className='w-full flex flex-row relative'>
+          <div className='w-full flex flex-row relative p-3'>
             <InputField></InputField>
           </div>
+          <div className='border border-white flex flex-row 2xl:gap-11 gap-1 p-2'>
+            Output
+          </div>
+          <p id="output">
+            Testing Output
+            </p>
         </div>
       </div>
       <div>Developed by Deep Patel and Anmol Panchal, November 2023</div>

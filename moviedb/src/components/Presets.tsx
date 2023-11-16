@@ -12,33 +12,36 @@ const Presets = () => {
   const testFunc1 = async () => {
     let content = document.getElementById("output");
     if (content) {
-      content.textContent = "Hello. Test Successful for Query Preset 1.";
       content.setAttribute(
         "value",
-        "Hello. Test Successful for Query Preset 1.Hello.Test Successful for Query Preset 1."
+        "SELECT f.title AS title, d.first_name || \' \' || d.last_name AS DIRECTOR_and_MOVIE FROM Film f JOIN Director d ON f.director_id = d.director_id ORDER BY first_name"
       );
     }
   };
   const testFunc2 = async () => {
     let content = document.getElementById("output");
     if (content) {
-      content.textContent = "Hi. Success for Query Preset 2 Test.";
-      content.setAttribute("value", "Hi. Success for Query Preset 2 Test.");
+      content.setAttribute(
+        "value", 
+        "SELECT first_name, last_name FROM Actor"
+        );
     }
   };
   const testFunc3 = async () => {
     let content = document.getElementById("output");
     if (content) {
-      content.setAttribute("value", "Hey. Query Preset 3 is SUCCESS!!!");
+      content.setAttribute(
+        "value", 
+        "SELECT first_name, last_name, username, password FROM TheUser ORDER BY password"
+        );
     }
   };
   const testFunc4 = async () => {
     let content = document.getElementById("output");
     if (content) {
-      content.innerHTML = "Yo. The test has passed for Query Preset 4.";
-      content.setAttribute(
+      content.setAttribute( 
         "value",
-        "Yo. The test has passed for Query Preset 4."
+        "SELECT a.theName, a.presenter, a.year_of_win, r.theName FROM Awards a JOIN Receiver r ON a.receiver_id = r.receiver_id WHERE a.year_of_win > 2021"
       );
     }
   };

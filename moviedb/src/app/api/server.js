@@ -69,6 +69,16 @@ app.post('/api/PopulateTables', async (req, res) => {
   }
 });
 
+app.get('/api/Queries', async (req, res) => {
+  try {
+    const queryResults = await queries(); 
+    res.status(200).json(queryResults);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
