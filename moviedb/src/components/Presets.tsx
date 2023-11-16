@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Queries from "./Queries";
 
 const Presets = () => {
   const handler = async () => {
@@ -34,6 +35,7 @@ const Presets = () => {
   const testFunc3 = async () => {
     let querycontent = document.getElementById("input");
     let outputcontent = document.getElementById("output");
+    let data = await Queries();
     if (querycontent && outputcontent) {
       querycontent.setAttribute(
         "value", 

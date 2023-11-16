@@ -31,7 +31,6 @@ async function queries() {
       console.log("Query Result 2:", query2.rows);
       console.log("Query Result 3:", query3.rows);
       console.log("Query Result 4:", query4.rows);
-      return [query1.rows, query2.rows, query3.rows, query4.rows];
     } catch (err) {
       console.log(err);
     }

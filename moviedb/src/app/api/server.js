@@ -7,6 +7,7 @@ const createtables = require('./CreateTables');
 const createviews = require('./CreateViews');
 const dropviews = require('./DropViews');
 const populatetables = require('./PopulateTables');
+const queries = require('./Queries');
 
 const app = express();
 const port = 3001; //server port is different from frontend

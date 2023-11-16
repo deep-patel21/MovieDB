@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import CreateTables from "@/components/CreateTables";
 import CreateViews from "@/components/CreateViews";
