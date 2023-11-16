@@ -8,7 +8,7 @@ const Queries = () => {
     console.log(data);
   }
 
-  return (
+  return (  
     <div>
       Output
     </div>
