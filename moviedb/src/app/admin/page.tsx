@@ -54,7 +54,7 @@ const Admin = () => {
             Output
           </div>
           <p id="output" className="text-[30px]">
-            Testing Output
+          Click on a preset or type your own custom query to see the output here!
             </p>
         </div>
       </div>
