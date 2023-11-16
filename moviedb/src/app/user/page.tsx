@@ -51,7 +51,7 @@ const User = () => {
           <div className='border border-white flex flex-row 2xl:gap-11 gap-1 p-2'>
             Output
           </div>
-          <p id="output">
+          <p id="output" className="text-[30px]">
             Testing Output
           </p>
         </div>
