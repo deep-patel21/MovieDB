@@ -4,10 +4,12 @@ import React from 'react'
 
 const QueriesCustom = () => {
     const handlerCustom = async () => { 
-        let querycontent = document.getElementById("input");
+        let querycontent = document.getElementById("input") as HTMLInputElement;
         let outputcontent = document.getElementById("output");
+        //let userQuery = "SELECT name FROM Studio";
+        let userQuery = querycontent?.getAttribute("value");
         try {
-            const response = await fetch('http://localhost:3001/api/QueryCustom', { method: 'GET' });
+            const response = await fetch(`http://localhost:3001/api/QueryCustom?userQueryInput=${userQuery}`, { method: 'GET' });
             const data = await response.json();
             const table = document.createElement("table");
             table.style.marginTop = '8px';
@@ -18,7 +20,7 @@ const QueriesCustom = () => {
             if (outputcontent && querycontent) {
             querycontent.setAttribute( 
                 "value",
-                "SELECT f.title AS title, d.first_name || \' \' || d.last_name AS DIRECTOR_and_MOVIE FROM Film f JOIN Director d ON f.director_id = d.director_id ORDER BY first_name"
+                "reza is the goaty"
             );
             for(const row of data) {
                 const tr = document.createElement("tr");

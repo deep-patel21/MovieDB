@@ -22,9 +22,9 @@ async function querycustom(userQueryInput) {
       const systemTestQuery = await connection.execute('SELECT SYSDATE FROM DUAL');
       console.log(" ");
       console.log("Rows: ", systemTestQuery.rows);
+      console.log("Query from the User:", userQueryInput);
       let queryCustom = await connection.execute(userQueryInput);
       console.log("Query Result 1:", queryCustom.rows);
-      console.log("Query from the User:", userQueryInput);
       return queryCustom.rows;
 
     } catch (err) {

@@ -21,8 +21,7 @@ app.use(cors());
 app.get("/api", (req,res) =>
 {
   res.send("Hello world!")
-
-})
+});
 
 app.post('/api/CreateTables', async (req, res) => {
   try {
@@ -115,16 +114,19 @@ app.get('/api/Query4', async (req, res) => {
 });
 
 app.get('/api/QueryCustom', async (req, res) => {
-  try {
-    userQuery = "SELECT last_name FROM Producer ORDER BY last_name DESC";
-    const result = await querycustom(userQuery); 
-    res.status(200).json(result);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ success: false, error: err.message });
-  }
+  const userQueryInput = req.query.userQueryInput
+  console.log("Query from the User (server.js):", userQueryInput);
+  res.send(userQueryInput);
+  // try {
+  //   const result = await querycustom(userQueryInput); 
+  //   res.status(200).json(result);
+  // } catch (err) {
+  //   console.error(err);
+  //   res.status(500).json({ success: false, error: err.message });
+  // }
 });
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+

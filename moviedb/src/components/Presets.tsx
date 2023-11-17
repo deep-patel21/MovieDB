@@ -17,7 +17,6 @@ const Presets = () => {
       table.style.border = '1px solid #a0aec0';
       const header = document.createElement("tr");
       if (outputcontent && querycontent) {
-        querycontent.innerHTML = '';
         querycontent.setAttribute( 
           "value",
           "SELECT f.title AS title, d.first_name || \' \' || d.last_name AS DIRECTOR_and_MOVIE FROM Film f JOIN Director d ON f.director_id = d.director_id ORDER BY first_name"
