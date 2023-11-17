@@ -75,7 +75,7 @@ app.post('/api/PopulateTables', async (req, res) => {
 
 app.get('/api/Query1', async (req, res) => {
   try {
-    const result = await query1(); 
+    const result = await query1();
     res.status(200).json(result);
   } catch (err) {
     console.error(err);
