@@ -39,7 +39,7 @@ const User = () => {
           </div>
         </div>
         <div className="text-[40px] w-full h-[600px] overflow-y-scroll border border-white p-3">
-          <div className="border border-white flex flex-row gap-11 p-2">
+          <div className="border border-white flex flex-row 2xl:gap-11 gap-1 p-2">
             <div className="px-[5px]">
               <Queries></Queries>
             </div>
