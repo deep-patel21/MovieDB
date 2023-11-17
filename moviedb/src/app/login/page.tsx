@@ -65,7 +65,7 @@ const Login = () => {
               className="text-white w-1/2 border-2 border-green-500 outline-none p-2 hover:bg-green-500 2xl:text-3xl"
               onClick={loginButton}
             >
-              login
+              Login
             </button>
           </div>
         </form>
