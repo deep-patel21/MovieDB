@@ -116,7 +116,7 @@ app.get('/api/Query4', async (req, res) => {
 
 app.get('/api/QueryCustom', async (req, res) => {
   try {
-    userQuery = "SELECT filmography FROM Director"
+    userQuery = "SELECT last_name FROM Producer ORDER BY last_name DESC";
     const result = await querycustom(userQuery); 
     res.status(200).json(result);
   } catch (err) {
