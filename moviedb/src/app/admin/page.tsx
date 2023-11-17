@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -9,8 +11,16 @@ import DropViews from "@/components/DropViews";
 import Queries from "@/components/Queries";
 import Presets from "@/components/Presets";
 import InputField from "@/components/InputField";
+import { useRouter } from "next/navigation";
 
 const Admin = () => {
+  const router = useRouter();
+
+  const logoutButton = (e: React.FormEvent<HTMLElement>) => {
+    e.preventDefault();
+    router.push("/login/");
+  };
+
   return (
     <div className="font-mono text-green-500 text-center">
       <div className="text-[65px] p-2 flex flex-row border border-white items-center">
@@ -35,7 +45,10 @@ const Admin = () => {
             </button>
           </div>
           <div>
-            <button className="mt-11 w-full border border-white hover:bg-green-500 hover:text-white">
+            <button
+              className="mt-11 w-full border border-white hover:bg-green-500 hover:text-white"
+              onClick={logoutButton}
+            >
               Logout
             </button>
           </div>
@@ -47,15 +60,16 @@ const Admin = () => {
             </div>
             <Presets></Presets>
           </div>
-          <div className='w-full flex flex-row relative p-3'>
+          <div className="w-full flex flex-row relative p-3">
             <InputField></InputField>
           </div>
-          <div className='border border-white flex flex-row 2xl:gap-11 gap-1 p-2'>
+          <div className="border border-white flex flex-row 2xl:gap-11 gap-1 p-2">
             Output
           </div>
           <p id="output" className="text-[25px]">
-          Click on a preset or type your own custom query to see the output here!
-            </p>
+            Click on a preset or type your own custom query to see the output
+            here!
+          </p>
         </div>
       </div>
       <div>Developed by Deep Patel and Anmol Panchal, November 2023</div>
