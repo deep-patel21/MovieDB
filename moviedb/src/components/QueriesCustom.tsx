@@ -6,8 +6,7 @@ const QueriesCustom = () => {
     const handlerCustom = async () => { 
         let querycontent = document.getElementById("input") as HTMLInputElement;
         let outputcontent = document.getElementById("output");
-        //let userQuery = "SELECT name FROM Studio";
-        let userQuery = querycontent?.getAttribute("value");
+        let userQuery = querycontent["value"];
         try {
             const response = await fetch(`http://localhost:3001/api/QueryCustom?userQueryInput=${userQuery}`, { method: 'GET' });
             const data = await response.json();

@@ -116,14 +116,13 @@ app.get('/api/Query4', async (req, res) => {
 app.get('/api/QueryCustom', async (req, res) => {
   const userQueryInput = req.query.userQueryInput
   console.log("Query from the User (server.js):", userQueryInput);
-  res.send(userQueryInput);
-  // try {
-  //   const result = await querycustom(userQueryInput); 
-  //   res.status(200).json(result);
-  // } catch (err) {
-  //   console.error(err);
-  //   res.status(500).json({ success: false, error: err.message });
-  // }
+  try {
+    const result = await querycustom(userQueryInput); 
+    res.status(200).json(result);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, error: err.message });
+  }
 });
 
 app.listen(port, () => {
