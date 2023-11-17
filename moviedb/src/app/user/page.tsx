@@ -33,8 +33,8 @@ const User = () => {
       <div className="flex flex-row border-4 border-black p-10 gap-11">
         <div className="text-[35px] flex flex-col gap-3 p-2 justify-start">
           <QueriesCustom></QueriesCustom>
-          <div className='mt-11 w-[307px] border border-white'>
-            <button className=''>Logout</button>
+          <div className=''>
+            <button className='mt-11 w-[307px] border border-white hover:bg-green-500 hover:text-white'>Logout</button>
           </div>
         </div>
         <div className="text-[40px] w-full h-[600px] overflow-y-scroll border border-white p-3">
