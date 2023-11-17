@@ -56,6 +56,7 @@ const Login = () => {
               className="bg-black text-white placeholder-white border-2 border-green-500 outline-none p-2 h-1/2 2xl:text-2xl"
               placeholder="Password..."
               onChange={passChange}
+              type="password"
             ></input>
           </div>
 
