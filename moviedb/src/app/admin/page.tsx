@@ -7,6 +7,7 @@ import PopulateTables from "@/components/PopulateTables";
 import DropTables from "@/components/DropTables";
 import DropViews from "@/components/DropViews";
 import Queries from "@/components/Queries";
+import QueriesCustom from "@/components/QueriesCustom";
 import Presets from "@/components/Presets";
 import InputField from "@/components/InputField";
 
@@ -29,11 +30,7 @@ const Admin = () => {
           <DropTables></DropTables>
           <DropViews></DropViews>
           <PopulateTables></PopulateTables>
-          <div>
-            <button className="mt-10 w-full border border-white hover:bg-green-500 hover:text-white">
-              Execute Custom Query
-            </button>
-          </div>
+          <QueriesCustom></QueriesCustom>
           <div>
             <button className="mt-11 w-full border border-white hover:bg-green-500 hover:text-white">
               Logout

@@ -1,6 +1,6 @@
 const oracledb = require('oracledb');
 
-async function query3() {
+async function querycustom(userQueryInput) {
   let connection;
 
   try {
@@ -21,11 +21,12 @@ async function query3() {
     try {
       const systemTestQuery = await connection.execute('SELECT SYSDATE FROM DUAL');
       console.log(" ");
-
       console.log("Rows: ", systemTestQuery.rows);
-      let query3 = await connection.execute('SELECT first_name, last_name, username, password FROM TheUser ORDER BY password');
-      console.log("Query Result 3:", query3.rows);
-      return query3.rows;
+      let queryCustom = await connection.execute(userQueryInput);
+      console.log("Query Result 1:", queryCustom.rows);
+      console.log("Query from the User:", userQueryInput);
+      return queryCustom.rows;
+
     } catch (err) {
       console.log(err);
     }
@@ -43,6 +44,6 @@ async function query3() {
   }
 }
 
-query3();
+querycustom();
 
-module.exports = query3;
+module.exports = querycustom;

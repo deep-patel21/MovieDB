@@ -8,6 +8,7 @@ import PopulateTables from '@/components/PopulateTables'
 import Image from 'next/image'
 import Presets from '@/components/Presets'
 import InputField from '@/components/InputField'
+import QueriesCustom from '@/components/QueriesCustom'
 
 const User = () => {
   return (
@@ -31,9 +32,7 @@ const User = () => {
       </div>
       <div className="flex flex-row border-4 border-black p-10 gap-11">
         <div className="text-[35px] flex flex-col gap-3 p-2 justify-start">
-          <div className='top-0'>
-            <button className='mt-10 w-full border border-white hover:bg-green-500 hover:text-white'>Execute Custom Query</button>
-          </div>
+          <QueriesCustom></QueriesCustom>
           <div className='mt-11 w-[307px] border border-white'>
             <button className=''>Logout</button>
           </div>

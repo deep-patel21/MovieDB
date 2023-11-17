@@ -11,6 +11,7 @@ const query1 = require('./query1'); //intentionally lowercase, don't touch
 const query2 = require('./Query2');
 const query3 = require('./Query3');
 const query4 = require('./Query4');
+const querycustom = require('./QueryCustom');
 
 const app = express();
 const port = 3001; //server port is different from frontend
@@ -106,6 +107,17 @@ app.get('/api/Query3', async (req, res) => {
 app.get('/api/Query4', async (req, res) => {
   try {
     const result = await query4(); 
+    res.status(200).json(result);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.get('/api/QueryCustom', async (req, res) => {
+  try {
+    userQuery = "SELECT filmography FROM Director"
+    const result = await querycustom(userQuery); 
     res.status(200).json(result);
   } catch (err) {
     console.error(err);
