@@ -53,7 +53,7 @@ const Admin = () => {
           <div className='border border-white flex flex-row 2xl:gap-11 gap-1 p-2'>
             Output
           </div>
-          <p id="output" className="text-[30px]">
+          <p id="output" className="text-[25px]">
           Click on a preset or type your own custom query to see the output here!
             </p>
         </div>

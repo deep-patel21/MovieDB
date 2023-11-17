@@ -11,9 +11,11 @@ const Presets = () => {
       const response = await fetch('http://localhost:3001/api/Query1', { method: 'GET' });
       const data = await response.json();
       const table = document.createElement("table");
+      table.style.marginTop = '8px';
       table.style.borderCollapse = 'collapse';
       table.style.width = '100%';
       table.style.border = '1px solid #a0aec0';
+      const header = document.createElement("tr");
       if (outputcontent && querycontent) {
         querycontent.setAttribute( 
           "value",
@@ -24,6 +26,9 @@ const Presets = () => {
           for(const cellValue of row) {
             const td = document.createElement("td");
             td.textContent = cellValue;
+            td.style.border = '1px solid #334155';
+            td.style.padding = '8px';
+            td.style.textAlign = 'center';
             tr.appendChild(td);
           }
           table.appendChild(tr);
@@ -42,6 +47,7 @@ const Presets = () => {
     let querycontent = document.getElementById("input");
     let outputcontent = document.getElementById("output");
     const table = document.createElement("table");
+    table.style.marginTop = '8px';
     table.style.borderCollapse = 'collapse';
     table.style.width = '100%';
     table.style.border = '1px solid #a0aec0';
@@ -58,6 +64,9 @@ const Presets = () => {
           for(const cellValue of row) {
             const td = document.createElement("td");
             td.textContent = cellValue;
+            td.style.border = '1px solid #334155';
+            td.style.padding = '8px';
+            td.style.textAlign = 'center';
             tr.appendChild(td);
           }
           table.appendChild(tr);
@@ -76,9 +85,10 @@ const Presets = () => {
     let querycontent = document.getElementById("input");
     let outputcontent = document.getElementById("output");
     const table = document.createElement("table");
+    table.style.marginTop = '8px';
     table.style.borderCollapse = 'collapse';
     table.style.width = '100%';
-    table.style.border = '1px solid #a0aec0';
+    table.style.border = '1px solid #fff';
     try {
       const response = await fetch('http://localhost:3001/api/Query3', { method: 'GET' });
       const data = await response.json();
@@ -92,6 +102,9 @@ const Presets = () => {
           for(const cellValue of row) {
             const td = document.createElement("td");
             td.textContent = cellValue;
+            td.style.border = '1px solid #334155';
+            td.style.padding = '8px';
+            td.style.textAlign = 'center';
             tr.appendChild(td);
           }
           table.appendChild(tr);
@@ -110,6 +123,7 @@ const Presets = () => {
     let querycontent = document.getElementById("input");
     let outputcontent = document.getElementById("output");
     const table = document.createElement("table");
+    table.style.marginTop = '8px';
     table.style.borderCollapse = 'collapse';
     table.style.width = '100%';
     table.style.border = '1px solid #a0aec0';
@@ -125,6 +139,9 @@ const Presets = () => {
           const tr = document.createElement("tr");
           for(const cellValue of row) {
             const td = document.createElement("td");
+            td.style.border = '1px solid #334155';
+            td.style.padding = '8px';
+            td.style.textAlign = 'center';
             td.textContent = cellValue;
             tr.appendChild(td);
           }
