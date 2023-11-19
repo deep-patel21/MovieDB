@@ -41,7 +41,7 @@ const Presets = () => {
     } catch (error) {
         let outputcontent = document.getElementById("output");
         if (outputcontent) {
-          outputcontent.textContent = "ERROR! Please ensure you have created and populated the tables before attempting to query data.";        }
+          outputcontent.textContent = "ERROR! Please ensure valid SQL syntax and the existence of records in tables or views before querying.";        }
         console.error(error);
     }
   }
@@ -82,7 +82,7 @@ const Presets = () => {
     } catch (error) {
       let outputcontent = document.getElementById("output");
       if (outputcontent) {
-        outputcontent.textContent = "ERROR! Please ensure you have created and populated the tables before attempting to query data.";      }
+        outputcontent.textContent = "ERROR! Please ensure valid SQL syntax and the existence of records in tables or views before querying.";      }
       console.error(error);
     }
   }
@@ -123,7 +123,7 @@ const Presets = () => {
     } catch (error) {
       let outputcontent = document.getElementById("output");
       if (outputcontent) {
-        outputcontent.textContent = "ERROR! Please ensure you have created and populated the tables before attempting to query data.";
+        outputcontent.textContent = "ERROR! Please ensure valid SQL syntax and the existence of records in tables or views before querying.";
       }
       console.error(error);
     }
@@ -165,7 +165,7 @@ const Presets = () => {
     } catch (error) {
       let outputcontent = document.getElementById("output");
       if (outputcontent) {
-        outputcontent.textContent = "ERROR! Please ensure you have created and populated the tables before attempting to query data.";
+        outputcontent.textContent = "ERROR! Please ensure valid SQL syntax and the existence of records in tables or views before querying.";
       }
       console.error(error);
     }
